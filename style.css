@@ -1,6 +1,8 @@
 :root {
     --light: #d8dbe0;
     --dark: #28292c;
+    --dark-transparent: #28292cc2;
+    
 }
   
 * {
@@ -10,7 +12,9 @@
 }
 
 body {
-    background: linear-gradient(90deg, black, rgb(48, 47, 47));
+    display: flex;
+    flex-direction: column;
+    background-image: url("assets/leafshadow640x960.jpg");
     height: 100vh;
     position: relative;
 }
@@ -18,71 +22,92 @@ body {
 nav {
     display: flex;
     width: 100vw;
+    background-color: var(--dark-transparent);
 }
 
 .home-icon {
     width: 20px;
     height: 20px;
+    margin: 5px;
 }
 
 .nav-right {
     display: flex;
     margin-left: auto;
+    margin-top: 5px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    margin-right: 5px;
 }
 
 .toggle-switch {
-position: relative;
-width: 50px;
+    position: relative;
+    width: 50px;
+    margin-right: 5px;
 }
 
 label {
-position: absolute;
-width: 100%;
-height: 25px;
-background-color: var(--dark);
-border-radius: 50px;
-cursor: pointer;
+    position: absolute;
+    width: 100%;
+    height: 25px;
+    background-color: var(--dark);
+    border-radius: 50px;
+    cursor: pointer;
+    border: 1px white solid;
 }
 
 input {
-position: absolute;
-display: none;
+    position: absolute;
+    display: none;
 }
 
 .slider {
-position: absolute;
-width: 100%;
-height: 100%;
-border-radius: 50px;
-transition: 0.3s;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    transition: 0.3s;
 }
 
 input:checked ~ .slider {
-background-color: var(--light);
+    background-color: var(--light);
 }
   
 .slider::before {
-content: "";
-position: absolute;
-top: 3.25px;
-left: 4px;
-width: 18.75px;
-height: 18.75px;
-border-radius: 50%;
-box-shadow: inset 7px -1px 0px 0px var(--light);
-background-color: var(--dark);
-transition: 0.3s;
+    content: "";
+    position: absolute;
+    top: 2.125px;
+    left: 4px;
+    width: 18.75px;
+    height: 18.75px;
+    border-radius: 50%;
+    box-shadow: inset 7px -1px 0px 0px var(--light);
+    background-color: var(--dark);
+    transition: 0.3s;
 }
   
 input:checked ~ .slider::before {
-transform: translateX(23.75px);
-background-color: var(--dark);
-box-shadow: none;
+    transform: translateX(23.75px);
+    background-color: var(--dark);
+    box-shadow: none;
 }
-  
 
 h1 {
-    color: rgb(240, 241, 236)
+    color: rgb(240, 241, 236);
+    text-align: center;
+    margin: auto;
+}
+
+footer {
+    color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    text-align: center;
 }
 
 .sr-only {
