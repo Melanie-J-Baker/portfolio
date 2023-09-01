@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
-        <a href="index.html"><img aria-hidden="true" focusable="false" class="home-icon" src="assets/home.svg"><span class="sr-only">Home</span></a>
+        <a class="home-link" href="index.html"><span class="sr-only">Home</span></a>
         <div class="nav-right">
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-            <div class = 'toggle-switch'>
+            <a class="link" href="about.html">About</a>
+            <a class="link" href="projects.html">Projects</a>
+            <a class="link" href="contact.html">Contact</a>
+            <div class="toggle-switch">
                 <label>
                     <input type="checkbox">
                     <span class="slider"></span>
@@ -22,6 +25,6 @@
     </nav>
     <h1>Mel Baker<br>Web Developer</h1>
     <div class="skills"></div>
-    <footer><p>&copy 2023 Mel Baker</p></footer>
+    <footer><p class="copyright">&copy 2023 Mel Baker</p></footer>
 </body>
 </html>

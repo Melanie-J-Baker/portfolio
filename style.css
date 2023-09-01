@@ -9,12 +9,15 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Inconsolata', monospace;
 }
 
 body {
     display: flex;
     flex-direction: column;
     background-image: url("assets/leafshadow640x960.jpg");
+    background-position: center;
+    background-size: cover;
     height: 100vh;
     position: relative;
 }
@@ -23,30 +26,51 @@ nav {
     display: flex;
     width: 100vw;
     background-color: var(--dark-transparent);
+    align-items: center;
+    margin-right: 5px;
 }
 
-.home-icon {
+.home-link {
+    margin-right: auto;
+    flex: auto;
     width: 20px;
     height: 20px;
     margin: 5px;
+    background-image: url("assets/home.svg");
+    background-size: 20px;
+    background-repeat: no-repeat;
+}
+
+.link:hover {
+    transform: scale(120%);
+    text-shadow: 3px 3px 3px black;
+    color:rgb(156, 155, 155);
+}
+
+.home-link:hover {
+    transform: scale(125%);
+    background-image: url("assets/home-grey.svg");
 }
 
 .nav-right {
     display: flex;
-    margin-left: auto;
-    margin-top: 5px;
+    margin: 5px;
+    flex-direction: row;
 }
 
-a {
+.link {
     color: white;
+    font-size: 18px;
     text-decoration: none;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 .toggle-switch {
     position: relative;
     width: 50px;
     margin-right: 5px;
+    display: flex;
+    align-items: center;
 }
 
 label {
@@ -103,11 +127,17 @@ h1 {
 
 footer {
     color: white;
+    background-color: var(--dark-transparent);
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100vw;
     text-align: center;
+    font-size: 15px;
+}
+
+.copyright {
+    margin: 5px 0px;
 }
 
 .sr-only {
@@ -122,4 +152,51 @@ footer {
     position: absolute !important;
     width: 1px !important;
     white-space: nowrap !important;
-  }
+}
+
+@media only screen and (min-width: 800px) {
+    body {
+        background-image: url("assets/leafshadow1920x2881.jpg");
+    }
+
+    .link {
+        font-size: 22px;
+        margin-right: 15px;
+    }
+
+    footer {
+        font-size: 20px;
+    }
+
+    .home-link {
+        width: 25px;
+        height: 25px;
+        margin: 8px;
+        background-size: 25px;
+    }
+
+    .toggle-switch {
+        transform: scale(125%);
+        margin-left: 8px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    body {
+        background-image: url("assets/leafshadow2400x3601.jpg");
+    }
+
+    .link {
+        font-size: 25px;
+    }
+
+    footer {
+        font-size: 22px;
+    }
+
+    .home-link {
+        width: 30px;
+        height: 30px;
+        background-size: 30px;
+    }
+}
