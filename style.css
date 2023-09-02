@@ -33,23 +33,22 @@ nav {
 .home-link {
     margin-right: auto;
     flex: auto;
+}
+
+.home-icon {
     width: 20px;
     height: 20px;
     margin: 5px;
-    background-image: url("assets/home.svg");
-    background-size: 20px;
-    background-repeat: no-repeat;
+    
 }
 
 .link:hover {
-    transform: scale(120%);
+    transform: scale(125%);
     text-shadow: 3px 3px 3px black;
-    color:rgb(156, 155, 155);
 }
 
-.home-link:hover {
+.home-icon:hover {
     transform: scale(125%);
-    background-image: url("assets/home-grey.svg");
 }
 
 .nav-right {
@@ -168,11 +167,10 @@ footer {
         font-size: 20px;
     }
 
-    .home-link {
+    .home-icon {
         width: 25px;
         height: 25px;
         margin: 8px;
-        background-size: 25px;
     }
 
     .toggle-switch {
@@ -194,9 +192,8 @@ footer {
         font-size: 22px;
     }
 
-    .home-link {
+    .home-icon {
         width: 30px;
         height: 30px;
-        background-size: 30px;
     }
 }
