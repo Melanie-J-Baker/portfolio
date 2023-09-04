@@ -144,6 +144,11 @@ h2 {
     font-size: 50px;
 }
 
+.skill-icon {
+    height: 40px;
+    width: 40px;
+}
+
 footer {
     color: white;
     background-color: var(--dark-transparent);
@@ -153,6 +158,11 @@ footer {
     width: 100vw;
     text-align: center;
     font-size: 15px;
+}
+
+.contact-link {
+    height: 30px;
+    width: 30px;
 }
 
 .copyright {
@@ -196,6 +206,7 @@ footer {
     .toggle-switch {
         transform: scale(125%);
         margin-left: 8px;
+        margin-right: 20px;
     }
 }
 
