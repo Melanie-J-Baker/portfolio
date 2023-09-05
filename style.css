@@ -144,9 +144,30 @@ h2 {
     font-size: 50px;
 }
 
+.skill-wrapper {
+    border: 0.5px white solid;
+    color: white;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+}
+
 .skill-icon {
     height: 40px;
     width: 40px;
+    margin: 10px;
+}
+
+.skills {
+    display: flex;
+    flex-direction: row;
+    border: 0.5px var(--dark) solid;
+    padding: 10px;
+    background-color: var(--dark-transparent);
 }
 
 footer {
@@ -161,8 +182,8 @@ footer {
 }
 
 .contact-link {
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
 }
 
 .copyright {
