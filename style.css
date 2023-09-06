@@ -155,19 +155,27 @@ input:checked ~ .slider::before {
     overflow: hidden;
 }
 
-#home, #about, #projects, #contact {
-    min-height: 100vh;
+.home-menu-wrapper {
+    background-color: var(--dark-transparent);
+    margin: 0px 10vw;
+    animation: fadein 2.5s ease-in;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.home-menu-wrapper {
+.home-menu-inner-wrapper {
     display: flex;
     flex-direction: column;
     padding: 50px;
-    background-color: var(--dark-transparent);
-    margin: 0px 30vw;
-    animation: fadein 2.5s ease-in;
-}
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    border: 1px var(--light) solid;
+    width: 97%;
 
+}
 /*.shadow-pop-tr {
 	-webkit-animation: shadow-pop-tr 2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
 	        animation: shadow-pop-tr 2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
@@ -175,14 +183,14 @@ input:checked ~ .slider::before {
 
 .home-menu-link {
     padding: 10px;
+    font-size:  2rem;
+    font-weight: 500;
 }
 
 .vc-text-5 {
     text-decoration: none;
    -webkit-text-fill-color: transparent;
    -webkit-text-stroke: thin var(--light);
-    font-size:  3rem;
-    font-weight: 500;
 }
  
 .vc-text-5:hover {
@@ -191,7 +199,7 @@ input:checked ~ .slider::before {
 
 h2 {
     font-size: 3.125rem;
-    padding-top: 20px;
+    padding-top: 100px;
 }
 
 .about-wrapper {
@@ -369,6 +377,10 @@ footer {
 
     .delayed {
         padding-top: 75px;
+    }
+
+    .home-menu-link {
+        font-size: 3.5rem;
     }
 
     footer {
