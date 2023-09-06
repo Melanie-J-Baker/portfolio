@@ -64,7 +64,7 @@ nav {
 }
 
 .link {
-    color: white;
+    color: var(--light);
     font-size: 1.125rem;
     text-decoration: none;
     margin-right: 10px;
@@ -86,7 +86,7 @@ label {
     background-color: var(--dark);
     border-radius: 50px;
     cursor: pointer;
-    border: 1px white solid;
+    border: 1px var(--light) solid;
 }
 
 input {
@@ -141,7 +141,7 @@ input:checked ~ .slider::before {
 }
 
 .h1, h2 {
-    color: rgb(240, 241, 236);
+    color: var(--light);
     text-align: center;
     margin: 0 auto;
 }
@@ -151,7 +151,7 @@ input:checked ~ .slider::before {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 95vh;
+    height: 50vh;
     overflow: hidden;
 }
 
@@ -159,8 +159,34 @@ input:checked ~ .slider::before {
     min-height: 100vh;
 }
 
+.home-menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    background-color: var(--dark-transparent);
+    margin: 0px 30vw;
+    animation: fadein 2.5s linear;
+}
+
+.home-menu-link {
+    padding: 10px;
+}
+
+.vc-text-5 {
+    text-decoration: none;
+   -webkit-text-fill-color: transparent;
+   -webkit-text-stroke: thin var(--light);
+    font-size:  3rem;
+    font-weight: 500;
+}
+ 
+.vc-text-5:hover {
+   -webkit-text-fill-color: var(--light);
+}
+
 h2 {
     font-size: 3.125rem;
+    padding-top: 20px;
 }
 
 .about-wrapper {
@@ -176,12 +202,13 @@ h2 {
 }
 
 .about-text {
-    color: white;
+    color: var(--light);
+    font-size: 1.5rem;
 }
 
 .skill-wrapper {
-    border: 0.5px white solid;
-    color: white;
+    border: 0.5px var(--light) solid;
+    color: var(--light);
     margin: 5px;
     padding: 5px;
     display: flex;
@@ -209,7 +236,7 @@ h2 {
 }
 
 footer {
-    color: white;
+    color: var(--light);
     background-color: var(--dark-transparent);
     position: fixed;
     left: 0;
@@ -242,8 +269,17 @@ footer {
     white-space: nowrap !important;
 }
 
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 @keyframes slidein {
-    from {
+    0% {
         margin-left: 75%;
         width: 250%;
         transform: scale(0);
@@ -257,7 +293,7 @@ footer {
         margin-left: 25%;
         width: 150%;
     }
-    to {
+    100% {
         margin-left: 0%;
         width: 100%;
         transform: scale(1);
@@ -265,7 +301,7 @@ footer {
 }
 
 @keyframes slidein-after {
-    from {
+    0% {
         margin-left: 100%;
         width: 300%;
         transform: scale(0);
@@ -274,7 +310,7 @@ footer {
         margin-left: 75%;
         width: 250%;
     }
-    to {
+    100% {
         margin-left: 0%;
         width: 100%;
         transform: scale(1);
