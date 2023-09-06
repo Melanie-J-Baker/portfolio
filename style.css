@@ -19,6 +19,7 @@ body {
     background-image: url("assets/leafshadow640x960.jpg");
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
     height: 100vh;
     position: relative;
 }
@@ -28,6 +29,7 @@ nav {
     width: 100vw;
     background-color: var(--dark-transparent);
     align-items: center;
+    padding: 5px 0px;
     margin-right: 5px;
     position: sticky;
     top: 0;
@@ -43,7 +45,7 @@ nav {
     width: 20px;
     height: 20px;
     margin: 5px;
-    
+    transition: transform 1s ease-out;
 }
 
 .link:hover {
@@ -63,9 +65,10 @@ nav {
 
 .link {
     color: white;
-    font-size: 18px;
+    font-size: 1.125rem;
     text-decoration: none;
     margin-right: 10px;
+    transition: transform 1s ease-out;
 }
 
 .toggle-switch {
@@ -122,26 +125,37 @@ input:checked ~ .slider::before {
     box-shadow: none;
 }
 
-h1 {
-    font-size: 75px;
+.h1 {
+    font-size: 4.688rem;
+    font-weight: 800;
+    animation-duration: 2s;
+    animation-name: slidein;
+    animation-timing-function: linear;
 }
 
-h1, h2 {
+.delayed {
+    animation-name: slidein-after;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+.h1, h2 {
     color: rgb(240, 241, 236);
     text-align: center;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .h1-wrapper {
-    height: 95vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 35vh 0;
+    overflow: hidden;
 }
 
 h2 {
-    font-size: 50px;
+    font-size: 3.125rem;
 }
 
 .skill-wrapper {
@@ -154,11 +168,12 @@ h2 {
     justify-content: center;
     align-items: center;
     font-weight: 800;
+    width: 90vw;
 }
 
 .skill-icon {
-    height: 40px;
-    width: 40px;
+    min-height: 40px;
+    min-width: 40px;
     margin: 10px;
 }
 
@@ -168,6 +183,7 @@ h2 {
     border: 0.5px var(--dark) solid;
     padding: 10px;
     background-color: var(--dark-transparent);
+    overflow: scroll;
 }
 
 footer {
@@ -178,7 +194,7 @@ footer {
     bottom: 0;
     width: 100vw;
     text-align: center;
-    font-size: 15px;
+    font-size: 0.938rem;
 }
 
 .contact-link {
@@ -204,18 +220,53 @@ footer {
     white-space: nowrap !important;
 }
 
+@keyframes slidein {
+    from {
+        margin-left: 75%;
+        width: 250%;
+    }
+    50% {
+        margin-left: 50%;
+        width: 200%;
+    }
+    75% {
+        font-size: 300%;
+        margin-left: 25%;
+        width: 150%;
+    }
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+@keyframes slidein-after {
+    0% {
+        margin-left: 100%;
+        width: 300%;
+    }
+    75% {
+        margin-left: 75%;
+        width: 250%;
+    }
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
 @media only screen and (min-width: 800px) {
     body {
         background-image: url("assets/leafshadow1920x2881.jpg");
     }
 
     .link {
-        font-size: 22px;
+        font-size: 1.375rem;
         margin-right: 15px;
     }
 
     footer {
-        font-size: 20px;
+        font-size: 1.25rem;
     }
 
     .home-icon {
@@ -237,11 +288,11 @@ footer {
     }
 
     .link {
-        font-size: 25px;
+        font-size: 1.563rem;
     }
 
     footer {
-        font-size: 22px;
+        font-size: 1.375rem;
     }
 
     .home-icon {
