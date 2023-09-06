@@ -135,7 +135,7 @@ input:checked ~ .slider::before {
 
 .delayed {
     animation-name: slidein-after;
-    animation-duration: 2s;
+    animation-duration: 2.5s;
     animation-timing-function: linear;
 }
 
@@ -224,6 +224,7 @@ footer {
     from {
         margin-left: 75%;
         width: 250%;
+        transform: scale(0);
     }
     50% {
         margin-left: 50%;
@@ -237,13 +238,15 @@ footer {
     to {
         margin-left: 0%;
         width: 100%;
+        transform: scale(1);
     }
 }
 
 @keyframes slidein-after {
-    0% {
+    from {
         margin-left: 100%;
         width: 300%;
+        transform: scale(0);
     }
     75% {
         margin-left: 75%;
@@ -252,6 +255,7 @@ footer {
     to {
         margin-left: 0%;
         width: 100%;
+        transform: scale(1);
     }
 }
 
