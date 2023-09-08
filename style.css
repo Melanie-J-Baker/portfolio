@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Inconsolata', monospace;
     scroll-behavior: smooth;
+    transition: all 1.5s ease-in-out;
 }
 
 .dark {
@@ -199,6 +200,7 @@ h2 {
     flex-direction: column;
     padding-left: 15px;
 }
+
 .home-menu-link {
     padding: 10px;
     font-size:  2rem;
@@ -219,7 +221,6 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
 }
 
 .about-wrapper {
@@ -310,7 +311,6 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh
 }
 
 .contact-wrapper {
@@ -564,6 +564,10 @@ footer {
         width: 250px;
     }
 
+    form {
+        margin-top: 100px;
+    }
+
     .contact-input {
         font-size: 1.2rem;
         margin: 10px 100px;
@@ -582,7 +586,7 @@ footer {
 
     .email-address {
         margin-right: 50px;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 
     .fern {
