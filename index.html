@@ -19,7 +19,7 @@
             <a class="link vc-text-5" href="#contact">Contact</a>
             <div class="toggle-switch">
                 <label class="slider-label">
-                    <input class="slider-input" type="checkbox">
+                    <input class="slider-input" type="checkbox" id="theme" name="theme">
                     <span class="slider"></span>
                 </label>
         </div>
@@ -366,8 +366,8 @@
         <h2 class="contact-heading">Contact</h2>
         <div class="contact-wrapper">
             <form action="" method="post">
-                <input class="contact-input" aria-label="Enter your name" type="text" id="name" name="name" placeholder="Name" required />
-                <input class="contact-input" aria-label="Enter your email" type="email" id="email" name="email" placeholder="Email" required />
+                <input class="contact-input" autocomplete="on" aria-label="Enter your name" type="text" id="name" name="name" placeholder="Name" required />
+                <input class="contact-input" autocomplete="on" aria-label="Enter your email" type="email" id="email" name="email" placeholder="Email" required />
                 <textarea class="contact-input" aria-label="Enter your message" id="message" name="message" rows="5" cols="30" placeholder="Message" required></textarea>
                 <button type="submit">Send</button>
             </form>
