@@ -40,9 +40,6 @@ nav {
     z-index: 6;
 }
 
-#home, #about, #projects, #contact {
-    min-height: 100vh;
-}
 .home-link {
     margin-right: auto;
     flex: auto;
@@ -181,16 +178,26 @@ h2 {
     align-items: center;
 }
 
+.menu-fern {
+    width: 100px;
+    height:100px;
+}
+
 .home-menu-inner-wrapper {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     padding: 50px;
     margin: 10px;
     justify-content: center;
     align-items: center;
     border: 1px var(--light) solid;
     width: 97%;
+}
 
+.links-div {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
 }
 .home-menu-link {
     padding: 10px;
@@ -302,12 +309,12 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100vh
 }
 
 .contact-wrapper {
     background-color: var(--dark-transparent);
     width: 80vw;
-    margin-top: 50px;
     padding: 5px;
 }
 
@@ -394,6 +401,12 @@ button:hover {
     justify-content: center;
     align-items: center;
     padding: 30px 0px;
+}
+
+.fern {
+    width: 100px;
+    height:100px;
+    padding:20px 0px;
 }
 
 
@@ -505,6 +518,17 @@ footer {
         padding-top: 75px;
     }
 
+    .menu-fern {
+        width: 200px;
+        height: 200px;
+    }
+
+    .links-div {
+        display: flex;
+        flex-direction: column;
+        padding-left: 200px;
+    }
+
     .home-menu-link {
         font-size: 3.5rem;
     }
@@ -553,7 +577,7 @@ footer {
     .contact-link {
         height: 40px;
         width: 40px;
-        margin: 10px;
+        margin: 5px 0px 10px 0px;
     }
 
     .email-address {
@@ -561,6 +585,11 @@ footer {
         font-size: 1.2rem;
     }
 
+    .fern {
+        width: 200px;
+        height: 200px;
+        padding: 30px 0px;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -579,5 +608,17 @@ footer {
     .home-icon {
         width: 40px;
         height: 40px;
+    }
+
+    .contact-link {
+        height: 50px;
+        width: 50px;
+        margin: 5px 0px 10px 0px;
+    }
+
+    .fern {
+        width: 300px;
+        height: 300px;
+        padding: 30px 0px;
     }
 }
