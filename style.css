@@ -219,6 +219,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100vh;
 }
 
 .about-wrapper {
@@ -409,7 +410,6 @@ button:hover {
     padding:20px 0px;
 }
 
-
 footer {
     color: var(--light);
     background-color: var(--dark-transparent);
@@ -577,7 +577,7 @@ footer {
     .contact-link {
         height: 40px;
         width: 40px;
-        margin: 5px 0px 10px 0px;
+        margin: 5px 10px 10px 10px;
     }
 
     .email-address {
@@ -610,10 +610,14 @@ footer {
         height: 40px;
     }
 
+    .contact-wrapper {
+        margin-top: 30px;
+    }
+
     .contact-link {
         height: 50px;
         width: 50px;
-        margin: 5px 0px 10px 0px;
+        margin: 5px 20px 10px 20px;
     }
 
     .fern {
