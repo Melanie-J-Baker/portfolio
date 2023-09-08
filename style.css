@@ -178,11 +178,6 @@ input:checked ~ .slider::before {
     width: 97%;
 
 }
-/*.shadow-pop-tr {
-	-webkit-animation: shadow-pop-tr 2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-	        animation: shadow-pop-tr 2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-}*/
-
 .home-menu-link {
     padding: 10px;
     font-size:  2rem;
@@ -202,6 +197,7 @@ input:checked ~ .slider::before {
 h2 {
     font-size: 3.125rem;
     padding: 30px 0px;
+    margin-top: 50px;
 }
 
 #about {
@@ -230,39 +226,47 @@ h2 {
     font-size: 1.3rem;
 }
 
+.skills {
+    overflow: hidden;
+    background-color: var(--dark-transparent);
+    width: 100vw;
+    white-space: nowrap;
+    display: flex;
+    margin-top: 50px;
+}
+
+.skills:hover .skills-slider {
+    animation-play-state: paused;
+}
+
 .skills-slider {
     display: flex;
-    flex-direction: row;
-    border: 0.5px var(--dark) solid;
-    padding: 10px;
-    background-color: var(--dark-transparent);
-    overflow: hidden;
-    position: relative;
-    margin: 50px 0px;
+    align-items: center;
     height: 200px;
-    width: 300px;
+    animation: 15s slider infinite linear;
 }
 
 .skill-wrapper {
-    border: 0.5px var(--light) solid;
-    color: var(--light);
-    margin: 5px;
-    padding: 5px;
+    height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: var(--light);
     font-weight: 800;
-    width: 33%;
-    position: absolute;
-    height: 165px;
-    transition: all 0.5s;
+    margin: 5px 20px;
+    padding: 5px;
+    border: 0.5px var(--light) dashed;
 }
 
 .skill-icon {
-    min-height: 40px;
-    min-width: 40px;
+    height: 100px;
+    width: 100px;
     margin: 10px;
+}
+
+.skill-icon + span {
+    font-size: 0.8rem;
 }
 
 #contact {
@@ -328,16 +332,31 @@ button:hover {
 
 }
 
+.mail-icon {
+    fill: var(--light);
+}
+
+.email-address {
+    color: var(--light);
+    font: 2rem;
+}
+
 .contact-link {
     height: 40px;
     width: 40px;
     margin: 10px;
+    fill: var(--light);
 }
+
+.white-fill {
+    fill: var(--light);
+} 
 
 .contact-link-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
 }
 
 
@@ -420,34 +439,16 @@ footer {
     }
 }
 
-/*@-webkit-keyframes shadow-pop-tr {
-    0% {
-      -webkit-box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
-              box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
-      -webkit-transform: translateX(0) translateY(0);
-              transform: translateX(0) translateY(0);
+@keyframes slider {
+    from {
+        transform: translateX(0);
     }
-    100% {
-      -webkit-box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
-              box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
-      -webkit-transform: translateX(-8px) translateY(8px);
-              transform: translateX(-8px) translateY(8px);
+    to {
+        transform: translateX(-100%);
     }
+
 }
-@keyframes shadow-pop-tr {
-    0% {
-      -webkit-box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
-              box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
-      -webkit-transform: translateX(0) translateY(0);
-              transform: translateX(0) translateY(0);
-    }
-    100% {
-      -webkit-box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
-              box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
-      -webkit-transform: translateX(-8px) translateY(8px);
-              transform: translateX(-8px) translateY(8px);
-    }
-}*/
+
 
 @media only screen and (min-width: 800px) {
     body {
@@ -496,10 +497,6 @@ footer {
         padding-right: 40px;
         padding-bottom: 0px;
     }
-
-    .skills-slider {
-        width: 500px;
-    }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -518,9 +515,5 @@ footer {
     .home-icon {
         width: 30px;
         height: 30px;
-    }
-
-    .skills-slider {
-        width: 700px;
     }
 }
