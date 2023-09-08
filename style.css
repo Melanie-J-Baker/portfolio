@@ -44,8 +44,8 @@ nav {
 }
 
 .home-icon {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     margin: 5px;
     transition: transform 1s ease-out;
 }
@@ -233,6 +233,27 @@ h2 {
     white-space: nowrap;
     display: flex;
     margin-top: 50px;
+    position: relative;
+}
+
+.skills:before,
+.skills:after {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    width: 250px;
+    height: 100%;
+    content: "";
+}
+
+.skills:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255,255,255, 0), var(--dark-transparent), var(--dark));
+}
+
+.skills:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--dark-transparent), var(--dark));
 }
 
 .skills:hover .skills-slider {
@@ -243,7 +264,7 @@ h2 {
     display: flex;
     align-items: center;
     height: 200px;
-    animation: 15s slider infinite linear;
+    animation: 35s slider infinite linear;
 }
 
 .skill-wrapper {
@@ -293,9 +314,13 @@ form {
     background-color: var(--dark-transparent);
     border: 1px var(--light) solid;
     margin: 5px;
-    padding: 5px;
+    padding: 10px;
     font-weight: 300;
     border-radius: 3px;
+}
+
+#name, #email {
+    height: 40px;
 }
 
 .contact-input:valid { 
@@ -308,7 +333,6 @@ form {
 .contact-input::placeholder {
     color: var(--light);
     font-weight: 700;
-
 }
 
 button {
@@ -321,7 +345,7 @@ button {
     align-self: center;
     padding: 10px 0px;
     font-size: 1rem;
-    transition: background-color 1s linear;
+    transition: background-color 1s linear, transform 1s ease-out;
     margin: 10px;
 }
 
@@ -329,23 +353,25 @@ button:hover {
     color: var(--light);
     background-color: var(--dark);
     border: 0.5px var(--light) solid;
+    transform: scale(125%);
+}
 
+.contact-link {
+    height: 30px;
+    width: 30px;
+    margin: 10px 5px;
+    fill: var(--light);
 }
 
 .mail-icon {
     fill: var(--light);
+    height: 20px;
+    width: 20px;
 }
 
 .email-address {
     color: var(--light);
-    font: 2rem;
-}
-
-.contact-link {
-    height: 40px;
-    width: 40px;
-    margin: 10px;
-    fill: var(--light);
+    font: 1rem;
 }
 
 .white-fill {
@@ -477,8 +503,8 @@ footer {
     }
 
     .home-icon {
-        width: 25px;
-        height: 25px;
+        width: 30px;
+        height: 30px;
         margin: 8px;
     }
 
@@ -497,9 +523,31 @@ footer {
         padding-right: 40px;
         padding-bottom: 0px;
     }
+
+    .contact-input {
+        font-size: 1.2rem;
+        margin: 10px 100px;
+    }
+
+    .mail-icon {
+        height: 30px;
+        width: 30px;
+    }
+
+    .contact-link {
+        height: 40px;
+        width: 40px;
+        margin: 10px;
+    }
+
+    .email-address {
+        margin-right: 50px;
+        font-size: 1.2rem;
+    }
+
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1200px) {
     body {
         background-image: url("assets/leafshadow2400x3601.jpg");
     }
@@ -513,7 +561,7 @@ footer {
     }
 
     .home-icon {
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
     }
 }
