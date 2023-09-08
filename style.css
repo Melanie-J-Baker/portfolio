@@ -137,6 +137,7 @@ input:checked ~ .slider::before {
     animation-duration: 1.5s;
     animation-name: slidein;
     animation-timing-function: ease-out;
+    margin-top: 50px;
 }
 
 .delayed {
@@ -144,6 +145,7 @@ input:checked ~ .slider::before {
     animation-name: slidein-after;
     animation-duration: 2s;
     animation-timing-function: ease-out;
+    margin-bottom: 50px;
 }
 
 .h1, h2 {
@@ -152,6 +154,13 @@ input:checked ~ .slider::before {
     margin: 0 auto;
     font-weight: 900;
     text-shadow: 2px 2px 2px var(--dark);
+
+}
+
+h2 {
+    font-size: 3.125rem;
+    padding: 30px 0px;
+    margin-top: 50px;
 }
 
 .h1-wrapper {
@@ -198,12 +207,6 @@ input:checked ~ .slider::before {
  
 .vc-text-5:hover {
    -webkit-text-fill-color: var(--light);
-}
-
-h2 {
-    font-size: 3.125rem;
-    padding: 30px 0px;
-    margin-top: 50px;
 }
 
 #about {
