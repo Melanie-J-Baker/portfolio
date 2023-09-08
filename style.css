@@ -1,16 +1,21 @@
-:root {
-    --light: #d8dbe0;
-    --dark: #28292c;
-    --dark-transparent: #28292cc2;
-    
-}
-  
 *, ::before, ::after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Inconsolata', monospace;
     scroll-behavior: smooth;
+}
+
+.dark {
+    --light: #d8dbe0;
+    --dark: #28292c;
+    --dark-transparent: #28292cc2;
+}
+
+.light {
+    --light: #28292c;
+    --dark: #d8dbe0;
+    --dark-transparent: #d8dbe0be;
 }
 
 body {
@@ -129,7 +134,6 @@ input:checked ~ .slider::before {
 
 .h1 {
     font-size: 3rem;
-    font-weight: 800;
     animation-duration: 1.5s;
     animation-name: slidein;
     animation-timing-function: ease-out;
@@ -146,6 +150,8 @@ input:checked ~ .slider::before {
     color: var(--light);
     text-align: center;
     margin: 0 auto;
+    font-weight: 900;
+    text-shadow: 2px 2px 2px var(--dark);
 }
 
 .h1-wrapper {
@@ -241,7 +247,7 @@ h2 {
     position: absolute;
     top: 0;
     z-index: 2;
-    width: 250px;
+    width: 100px;
     height: 100%;
     content: "";
 }
@@ -525,6 +531,11 @@ footer {
     .profile-photo {
         padding-right: 40px;
         padding-bottom: 0px;
+    }
+
+    .skills:before,
+    .skills:after {
+        width: 250px;
     }
 
     .contact-input {
