@@ -21,3 +21,15 @@ slider.addEventListener("click", () => {
     profile.src = "assets/user.svg";
   }
 });
+
+const projects = document.querySelector(".projects-top");
+const menu = document.querySelector(".projects-menu");
+projects.addEventListener("mouseover", () => {
+  menu.classList.add("visible");
+});
+menu.addEventListener("mouseover", () => {
+  menu.classList.add("visible");
+});
+menu.addEventListener("mouseout", () => {
+  menu.classList.remove("visible");
+});
