@@ -193,9 +193,8 @@ h2 {
 
 h3 {
     color: var(--light);
-    font-size: 2.5rem;
-    margin-left: 10px;
-    padding-top: 50px;
+    font-size: 2rem;
+    margin: 10px;
 }
 
 .h1-wrapper {
@@ -354,7 +353,31 @@ h3 {
 .project {
     background-color: var(--dark);
     padding: 10px;
-    margin: 50px 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.screenshot {
+    width: 100%;
+}
+
+.project-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    padding-top: 10px;
+}
+
+.project-link, .visit {
+    margin-right: 20px;
+}
+
+.visit {
+    color: var(--light);
+    font-size: 1.5rem;
+    text-decoration: none;
 }
 
 #contact {
@@ -642,6 +665,11 @@ footer {
         width: 250px;
     }
 
+    .projects-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
     form {
         margin-top: 100px;
     }
@@ -707,4 +735,11 @@ footer {
         height: 300px;
         padding: 30px 0px;
     }
+}
+
+@media only screen and (min-width: 1600px) {
+    .projects-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
 }
