@@ -348,6 +348,11 @@ h3 {
 .projects-container {
     background-color: var(--dark-transparent);
     padding: 10px;
+    margin-top: 50px;
+}
+
+.project-heading {
+    margin-top: 50px;
 }
 
 .project {
@@ -357,17 +362,26 @@ h3 {
     display: flex;
     flex-direction: column;
     box-shadow: 2px 2px 2px var(--light), -2px -2px 2px var(--light);
-    transition: transform 1s ease;
+    transition: all 1s ease;
     border-radius: 10px;
 }
 
 .project:hover {
     transform: scale(1.1);
-    box-shadow: 4px 4px 4px var(--light), -4px -4px 4px var(--light);
+    box-shadow: 5px 5px 5px var(--light), -5px -5px 5px var(--light);
+    z-index: 1;
 }
 
 .screenshot {
     width: 100%;
+    margin-top: 10px;
+}
+
+.project-desc {
+    color: var(--light);
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 1.2rem;
 }
 
 .project-links {
@@ -376,6 +390,7 @@ h3 {
     align-items: center;
     justify-content: end;
     padding-top: 10px;
+    margin-bottom: 40px;
 }
 
 .project-link, .visit {
@@ -386,6 +401,7 @@ h3 {
 .project-link:hover, .visit:hover {
     transform: scale(110%);
     text-shadow: 3px 3px 3px black;
+    text-decoration: underline;
 }
 
 .visit {
@@ -467,6 +483,11 @@ button:hover {
     width: 30px;
     margin: 10px 5px;
     fill: var(--light);
+    transition: transform 1s ease-out;
+}
+
+.contact-link:hover {
+    transform: scale(120%);
 }
 
 .mail-icon {
