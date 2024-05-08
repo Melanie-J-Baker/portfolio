@@ -6,8 +6,12 @@ Visit portfolio at:
 https://melanie-j-baker.github.io/portfolio/
 
 ![image](https://github.com/Melanie-J-Baker/portfolio/assets/104843873/dcbb2533-1c12-41ea-9d37-492290c9ba24)
+
+Rotating carousel of skills acquired so far:
 ![image](https://github.com/Melanie-J-Baker/portfolio/assets/104843873/543d2c2d-cf04-41b0-8bc9-f5cf1e180d2e)
+
 ![image](https://github.com/Melanie-J-Baker/portfolio/assets/104843873/1f3286ea-5e0c-4bc2-94d4-8790b5166364)
+
 ![image](https://github.com/Melanie-J-Baker/portfolio/assets/104843873/aa32f286-68c9-46a0-a3a7-b17bb4a40a90)
 
 Dropdown menu for project selection:
