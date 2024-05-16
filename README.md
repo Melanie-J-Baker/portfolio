@@ -1,6 +1,6 @@
 # portfolio
 
-Personal Porfolio project for Odin Project
+Personal Porfolio project for Odin Project as part of the Advanced HTML and CSS course: https://www.theodinproject.com/lessons/node-path-advanced-html-and-css-homepage
 
 Visit portfolio at:
 https://melanie-j-baker.github.io/portfolio/
