@@ -59,6 +59,7 @@ document.forms["contact"].addEventListener("submit", (event) => {
     })
     .finally(() =>
       setTimeout(() => {
+        console.log(contactFormInputs);
         contactFormInputs.forEach((formInput) => {
           formInput.value = "";
         });
