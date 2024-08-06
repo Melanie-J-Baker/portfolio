@@ -55,5 +55,6 @@ document.forms["contact"].addEventListener("submit", (event) => {
     })
     .catch((error) => {
       contactFormInfo.textContent = error.message;
-    });
+    })
+    .finally(() => setTimeout(() => window.location.reload(), 3000));
 });
