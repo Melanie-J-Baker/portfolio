@@ -904,11 +904,12 @@
     <section id="contact">
         <h2 class="contact-heading">Contact</h2>
         <div class="contact-wrapper">
-            <form action="" method="post">
+            <form action="http://localhost:3000/messages/new" method="post" id="contact">
                 <input class="contact-input" autocomplete="on" aria-label="Enter your name" type="text" id="name" name="name" placeholder="Name" required />
                 <input class="contact-input" autocomplete="on" aria-label="Enter your email" type="email" id="email" name="email" placeholder="Email" required />
-                <textarea class="contact-input" aria-label="Enter your message" id="message" name="message" rows="5" cols="30" placeholder="Message" required></textarea>
+                <textarea class="contact-input" aria-label="Enter your message" id="text" name="text" rows="5" cols="30" placeholder="Message" required></textarea>
                 <button type="submit">Send</button>
+                <p id="contact-form-info"></p>
             </form>
             <div class="contact-link-wrapper">
                 <svg class="mail-icon contact-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

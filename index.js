@@ -4,6 +4,8 @@ const home = document.querySelector(".home-icon");
 const menuFern = document.querySelector(".menu-fern");
 const endFern = document.querySelector(".fern");
 const profile = document.querySelector(".profile-photo");
+const contactFormInfo = document.getElementById("contact-form-info");
+
 slider.addEventListener("click", () => {
   if (html.classList.contains("dark")) {
     html.classList.remove("dark");
@@ -24,6 +26,7 @@ slider.addEventListener("click", () => {
 
 const projects = document.querySelector(".projects-top");
 const menu = document.querySelector(".projects-menu");
+
 projects.addEventListener("mouseover", () => {
   menu.classList.add("visible");
 });
@@ -32,4 +35,25 @@ menu.addEventListener("mouseover", () => {
 });
 menu.addEventListener("mouseout", () => {
   menu.classList.remove("visible");
+});
+
+document.forms["contact"].addEventListener("submit", (event) => {
+  event.preventDefault();
+  contactFormInfo.textContent = "Message is being sent";
+  fetch(event.target.action, {
+    method: "POST",
+    body: new URLSearchParams(new FormData(event.target)),
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json(); // or response.text() or whatever the server sends
+    })
+    .then((body) => {
+      contactFormInfo.textContent = body.status;
+    })
+    .catch((error) => {
+      contactFormInfo.textContent = error.message;
+    });
 });
