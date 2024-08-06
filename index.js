@@ -52,8 +52,14 @@ document.forms["contact"].addEventListener("submit", (event) => {
     })
     .then((body) => {
       contactFormInfo.textContent = body.status;
+      setTimeout(() => {
+        document.getElementById("contact").reset();
+      }, 2000);
     })
     .catch((error) => {
       contactFormInfo.textContent = error.message;
+      setTimeout(() => {
+        document.getElementById("contact").reset();
+      }, 2000);
     });
 });
