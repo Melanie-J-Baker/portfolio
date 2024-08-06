@@ -4,7 +4,7 @@ const home = document.querySelector(".home-icon");
 const menuFern = document.querySelector(".menu-fern");
 const endFern = document.querySelector(".fern");
 const profile = document.querySelector(".profile-photo");
-const contactForm = document.getElementById("contact");
+const contactFormInputs = document.getElementsByClassName("contact-input");
 const contactFormInfo = document.getElementById("contact-form-info");
 
 slider.addEventListener("click", () => {
@@ -57,5 +57,12 @@ document.forms["contact"].addEventListener("submit", (event) => {
     .catch((error) => {
       contactFormInfo.textContent = error.message;
     })
-    .finally(() => setTimeout(() => contactForm.reset(), 2000));
+    .finally(() =>
+      setTimeout(() => {
+        contactFormInputs.forEach((formInput) => {
+          formInput.value = "";
+        });
+        contactFormInfo.textContent = "";
+      }, 2000)
+    );
 });
