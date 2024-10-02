@@ -383,7 +383,7 @@ h3 {
     justify-content: end;
     padding-top: 10px;
     margin-bottom: 40px;
-    align-self: flex-end;
+    margin-top: auto;
 }
 
 .project-link, .visit {
