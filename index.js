@@ -57,7 +57,10 @@ document.forms["contact"].addEventListener("submit", (event) => {
       }, 2000);
     })
     .catch((error) => {
-      contactFormInfo.textContent = error.message;
+      contactFormInfo.textContent =
+        "Error sending message (" +
+        error.message +
+        "). Please try again later.";
       setTimeout(() => {
         document.getElementById("contact").reset();
       }, 2000);
