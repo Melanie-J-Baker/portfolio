@@ -26,6 +26,7 @@ slider.addEventListener("click", () => {
 
 const projects = document.querySelector(".projects-top");
 const menu = document.querySelector(".projects-menu");
+const menuItems = document.getElementsByClassName("menuItem");
 
 projects.addEventListener("mouseover", () => {
   menu.classList.add("visible");
@@ -36,6 +37,12 @@ menu.addEventListener("mouseover", () => {
 menu.addEventListener("mouseout", () => {
   menu.classList.remove("visible");
 });
+
+menuItems.forEach((menuItem) => {
+  menuItem.addEventListener("click", () => {
+    menu.classList.remove("visible");
+  })
+})
 
 document.forms["contact"].addEventListener("submit", (event) => {
   event.preventDefault();
