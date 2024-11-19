@@ -6,6 +6,9 @@ const endImage = document.querySelector(".fern");
 const profile = document.querySelector(".profile-photo");
 const contactFormInfo = document.getElementById("contact-form-info");
 const loadingElement = document.getElementById("loading");
+const projects = document.querySelector(".projects-top");
+const menu = document.querySelector(".projects-menu");
+const menuItems = document.querySelectorAll(".menuItem");
 
 slider.addEventListener("click", () => {
   if (html.classList.contains("dark")) {
@@ -24,10 +27,6 @@ slider.addEventListener("click", () => {
     profile.src = "assets/images/user.svg";
   }
 });
-
-const projects = document.querySelector(".projects-top");
-const menu = document.querySelector(".projects-menu");
-const menuItems = document.getElementsByClassName("link vc-text-5 projects menuItem");
 
 projects.addEventListener("mouseover", () => {
   menu.classList.add("visible");
