@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
     <script src="index.js" defer></script>
+    <script src="setIsLoading.js" defer></script>
 </head>
 <body>
     <nav>
@@ -535,11 +536,12 @@
     <section id="contact">
         <h2 class="contact-heading">Contact</h2>
         <div class="contact-wrapper">
-            <form action="https://contact-form-api.glitch.me/messages/new" method="post" id="contact">
+            <form action="https://contact-form-api.glitch.me/messages/new" method="post" id="contact" name="contact">
                 <input class="contact-input" autocomplete="on" aria-label="Enter your name" type="text" id="name" name="name" placeholder="Name" required />
                 <input class="contact-input" autocomplete="on" aria-label="Enter your email" type="email" id="email" name="email" placeholder="Email" required />
                 <textarea class="contact-input" aria-label="Enter your message" id="text" name="text" rows="5" cols="30" placeholder="Message" required></textarea>
-                <button type="submit">Send</button>
+                <button type="submit" onClick="setIsLoading()">Send</button>
+                <div id="loading"></div>
                 <p id="contact-form-info"></p>
             </form>
             <div class="contact-link-wrapper">
