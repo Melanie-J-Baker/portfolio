@@ -5,6 +5,7 @@ const menuImage = document.querySelector(".menu-fern");
 const endImage = document.querySelector(".fern");
 const profile = document.querySelector(".profile-photo");
 const contactFormInfo = document.getElementById("contact-form-info");
+const loadingElement = document.getElementById("loading");
 
 slider.addEventListener("click", () => {
   if (html.classList.contains("dark")) {
@@ -48,6 +49,7 @@ if (menuItems.length !== 0) {
 
 document.forms["contact"].addEventListener("submit", (event) => {
   event.preventDefault();
+  loadingElement.style.display = "block";
   contactFormInfo.textContent = "Message is being sent";
   fetch(event.target.action, {
     method: "POST",
@@ -64,6 +66,7 @@ document.forms["contact"].addEventListener("submit", (event) => {
       setTimeout(() => {
         document.getElementById("contact").reset();
       }, 2000);
+      loadingElement.style.display = "none";
     })
     .catch((error) => {
       contactFormInfo.textContent =
@@ -73,5 +76,6 @@ document.forms["contact"].addEventListener("submit", (event) => {
       setTimeout(() => {
         document.getElementById("contact").reset();
       }, 2000);
+      loadingElement.style.display = "none";
     });
 });
