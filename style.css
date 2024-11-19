@@ -22,7 +22,7 @@
 body {
     display: flex;
     flex-direction: column;
-    background-image: url("assets/leafshadow640x960.jpg");
+    background-image: url("assets/images/leafshadow640x960.jpg");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -573,7 +573,7 @@ footer {
 
 @media only screen and (min-width: 800px) {
     body {
-        background-image: url("assets/leafshadow1920x2881.jpg");
+        background-image: url("assets/images/leafshadow1920x2881.jpg");
     }
 
     nav {
@@ -690,7 +690,7 @@ footer {
 
 @media only screen and (min-width: 1200px) {
     body {
-        background-image: url("assets/leafshadow2400x3601.jpg");
+        background-image: url("assets/images/leafshadow2400x3601.jpg");
     }
 
     .link {
