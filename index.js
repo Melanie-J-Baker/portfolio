@@ -27,7 +27,7 @@ slider.addEventListener("click", () => {
 
 const projects = document.querySelector(".projects-top");
 const menu = document.querySelector(".projects-menu");
-const menuItems = document.getElementsByClassName("menuItem");
+const menuItems = document.getElementsByClassName("link vc-text-5 projects menuItem");
 
 projects.addEventListener("mouseover", () => {
   menu.classList.add("visible");
