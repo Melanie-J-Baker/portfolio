@@ -38,11 +38,13 @@ menu.addEventListener("mouseout", () => {
   menu.classList.remove("visible");
 });
 
-menuItems.forEach((menuItem) => {
-  menuItem.addEventListener("click", () => {
-    menu.classList.remove("visible");
+if (menuItems.length !== 0) {
+  menuItems.forEach((menuItem) => {
+    menuItem.addEventListener("click", () => {
+      menu.classList.remove("visible");
+    })
   })
-})
+};
 
 document.forms["contact"].addEventListener("submit", (event) => {
   event.preventDefault();
