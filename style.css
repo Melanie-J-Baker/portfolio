@@ -271,6 +271,7 @@ h3 {
 .about-text {
     color: var(--light);
     font-size: 1.3rem;
+    line-height: 1.5;
 }
 
 .skills {
