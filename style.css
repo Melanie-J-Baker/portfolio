@@ -36,7 +36,7 @@ nav {
     width: 100vw;
     max-width: 2000px;
     height: 50px;
-    background-color: var(--dark-transparent);
+    background-color: var(--dark);
     align-items: center;
     padding: 5px 0px;
     margin-right: 5px;
@@ -90,7 +90,7 @@ nav {
     position: absolute;
     animation: expand 1s ease-in-out;
     transform-origin: top;
-    z-index: 1;
+    z-index: 10;
     background-color: var(--dark-transparent);
     top: 50px;
     text-align: center;
@@ -262,9 +262,8 @@ h3 {
     background-color: var(--dark-transparent);
 }
 
-.profile-photo {
+.aws-logo {
     width: 150px;
-    height: 150px;
     padding-bottom: 40px;
 }
 
@@ -340,9 +339,9 @@ h3 {
 }
 
 .projects-container {
-    background-color: var(--dark-transparent);
     padding: 10px 0px;
-    margin: 50px 10vw 10px 10vw;
+    margin: 50px 10px 10px 10px;
+    width: 100vw
 }
 
 .project-heading {
@@ -351,7 +350,7 @@ h3 {
 
 .project {
     background-color: var(--dark);
-    padding: 10px;
+    padding-bottom: 10px;
     margin: 10px;
     display: flex;
     flex-direction: column;
@@ -367,14 +366,15 @@ h3 {
 
 .screenshot {
     width: 100%;
-    margin-top: 10px;
+    height: 40%;
+    object-fit: contain;
 }
 
 .project-desc {
     color: var(--light);
     padding: 5px;
     margin-top: 10px;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .project-links {
@@ -523,13 +523,14 @@ button:hover {
 
 footer {
     color: var(--light);
-    background-color: var(--dark-transparent);
+    background-color: var(--dark);
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100vw;
     text-align: center;
     font-size: 0.5rem;
+    z-index: 10;
 }
 
 .copyright {
@@ -662,7 +663,7 @@ footer {
         flex-direction: row;
     }
 
-    .profile-photo {
+    .aws-logo {
         padding-right: 40px;
         padding-bottom: 0px;
     }
