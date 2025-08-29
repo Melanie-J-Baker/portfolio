@@ -10,12 +10,14 @@
 .dark {
     --light: #d8dbe0;
     --dark: #28292c;
+    --button: #4b4d52;
     --dark-transparent: #28292cc2;
 }
 
 .light {
     --light: #28292c;
     --dark: #d8dbe0;
+    --button: #c8cbcf;
     --dark-transparent: #d8dbe0be;
 }
 
@@ -344,19 +346,15 @@ h3 {
     width: 100vw
 }
 
-.project-heading {
-    margin-top: 10px;
-}
-
 .project {
     background-color: var(--dark);
-    padding-bottom: 10px;
-    margin: 10px;
+    margin: 15px;
     display: flex;
     flex-direction: column;
     box-shadow: 2px 2px 2px var(--light), -2px -2px 2px var(--light);
     transition: all 1s ease;
     border-radius: 10px;
+    justify-content: space-between;
 }
 
 .project:hover {
@@ -370,39 +368,82 @@ h3 {
     object-fit: contain;
 }
 
+.project-heading {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
 .project-desc {
     color: var(--light);
-    padding: 5px;
-    margin-top: 10px;
+    padding: 0px 5px;
     font-size: 1rem;
+}
+
+.techstack {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px;
+    gap: 10px;
+    color: white;
+    margin: 10px;
+    border: 1px var(--button) solid;
+}
+
+.techstack-text {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 5px;
+    grid-column: 1 / -1;
+}
+
+.tech-icon {
+    height: 30px;
+    width: 30px;
+}
+
+.tech-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .project-links {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: end;
+    justify-content: center;
     padding-top: 10px;
-    margin-bottom: 10px;
-    margin-top: auto;
+    margin: 10px 0px;
+    padding-bottom: 10px;
 }
 
-.project-link, .visit {
-    margin-right: 20px;
+.project-link, .tryit-link {
+    padding: 0px 15px;
+    margin: 0px 10px;
     transition: transform 1s ease-out;
+    text-decoration: none;
+    color: var(--light);
+    font-size: 1.2rem;
+    font-weight: 700;
+    background-color: var(--button);
+    border-radius: 10px;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-.project-link:hover, .visit:hover {
+.github-link {
+    padding-right: 10px;
+    height: 25px;
+}
+
+.project-link:hover, .tryit-link:hover {
     transform: scale(110%);
     text-shadow: 3px 3px 3px black;
-    text-decoration: underline;
-}
-
-.project-link-text {
-    color: var(--light);
-    font-size: 1.5rem;
-    text-decoration: none;
-    font-weight: 700;
 }
 
 #cv {
