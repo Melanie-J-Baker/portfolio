@@ -398,7 +398,7 @@ h3 {
     text-decoration: underline;
 }
 
-.visit {
+.project-link-text {
     color: var(--light);
     font-size: 1.5rem;
     text-decoration: none;
