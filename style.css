@@ -377,6 +377,7 @@ h3 {
     color: var(--light);
     padding: 0px 5px;
     font-size: 1rem;
+    padding: 0px 10px;
 }
 
 .techstack {
